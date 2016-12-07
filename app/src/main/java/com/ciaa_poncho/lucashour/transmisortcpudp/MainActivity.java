@@ -91,7 +91,6 @@ public class MainActivity extends ActionBarActivity {
                 /* Método de clase abstracta vacío, no interesa su utilización */
             }
 
-            @Override
             public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
                 /* Método de clase abstracta vacío, no interesa su utilización */
             }
@@ -151,10 +150,9 @@ public class MainActivity extends ActionBarActivity {
 
                 AlertDialog.Builder message = new AlertDialog.Builder(this);
                 message.setTitle("Información");
-                message.setMessage("Versión: "+ version + "\nFacultad de Ingeniería - Universidad Nacional de La Plata\nProyecto: CIAA");
+                message.setMessage("Versión: "+ version + "\nFacultad de Informática - Universidad Nacional de La Plata\nCátedra: Taller de Proyecto 2\nAutores: Ailán, Hourquebie");
                 message.setCancelable(false);
                 message.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
-
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.cancel();
                     }

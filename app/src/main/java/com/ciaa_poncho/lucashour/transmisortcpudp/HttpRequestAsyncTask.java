@@ -60,7 +60,7 @@ public class HttpRequestAsyncTask extends AsyncTask<Void, Void, Void> {
                     (0, false));
 
             /* Definición de URL - Estructura: http://IP_ADDRESS:PORT/?parameter=SOMETHING */
-            URI website = new URI("http://"+ipAddress+":"+portNumber+"/?"+parameterValue);
+            URI website = new URI("http://"+ipAddress+":"+portNumber+"/set_network?"+parameterValue);
 
             /* Construcción de la solicitud HTTP */
             HttpGet getRequest = new HttpGet(); // Creación de HTTP GET
@@ -72,14 +72,12 @@ public class HttpRequestAsyncTask extends AsyncTask<Void, Void, Void> {
             /* Recepción de respuesta HTTP del servidor */
             InputStream server_reply = null;
             server_reply = response.getEntity().getContent();
-            BufferedReader in = new BufferedReader(new InputStreamReader(
-                    server_reply
-            ));
+            BufferedReader in = new BufferedReader(new InputStreamReader(server_reply));
             serverResponse = in.readLine(); // Respuesta del servidor
 
             /* Cierre de la conexión */
-            //server_reply.close();
-            //httpClient.getConnectionManager().shutdown();
+            server_reply.close();
+            httpClient.getConnectionManager().shutdown();
 
         } catch (ClientProtocolException e) {
             // Error de HTTP

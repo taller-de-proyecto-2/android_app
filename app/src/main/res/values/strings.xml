@@ -2,7 +2,7 @@
 
     <!--Nombre de Aplicación-->
 
-    <string name="app_name">Transmisor HTTP</string>
+    <string name="app_name">Configurar GPS Tracker</string>
 
     <!--Opciones de Menú superior-->
 
@@ -16,9 +16,11 @@
 
     <!-- Fragments -->
 
-    <string name="behaviour_title">ENVÍO DE COMANDOS</string>
-    <string name="up_button">UP</string>
-    <string name="down_button">DOWN</string>
+    <string name="behaviour_title">CONFIGURAR RED WIFI</string>
+    <string name="submit_behaviour">ENVIAR</string>
+    <string name="ssid">Nombre de red</string>
+    <string name="password">Contraseña</string>
+
     <string name="submit_configuration">MODIFICAR</string>
     <string name="configuration_title">CONFIGURACIÓN</string>
     <string name="option1">Dirección IP</string>
